@@ -1,0 +1,40 @@
+
+{% extends 'admin_panel/common.html' %}
+
+{% block common %}
+
+    {% load static %}
+
+    {% if request.session.status %}
+    <table align="center" border="0">
+    <tr>
+        <th>
+            {% include 'admin_panel/operations.html' %}
+        </th>
+    </tr>
+
+    <tr>
+        <th>
+                <table align="center" border="2">
+                    <tr>
+                        <th>
+
+                        </th>
+                    </tr>
+                </table>
+        </th>
+    </tr>
+    </table>
+     {% else %}
+
+        <h3 style="text-align: center;font-family: 'Agency FB';font-size: 25px;color: red">
+            Please Do Login
+        </h3>
+
+    {% endif %}
+
+
+
+
+
+{% endblock %}
